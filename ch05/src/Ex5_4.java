@@ -1,24 +1,27 @@
 public class Ex5_4 {
-	// ArrayEx3
+	// ArrayEx4
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] number = new int[10];
+		// 45개의 정수값을 저장하기 위한 배열 생성.
+		int[] ball = new int[45];
 		
-		for(int i=0; i< number.length; i++) {
-			number[i] = i;	// 배열을 0~9의 숫자로 초기화한다.
-			System.out.print(number[i]);
-		}
-		System.out.println();
+		// 배열의 각 요소에 1~45의 값을 저장한다.
+		for(int i =0; i< ball.length; i++)
+			ball[i] = i+1;		// ball[0]에 1이 저장된
 		
-		for(int i =0; i < 100; i++) {
-			int n = (int)(Math.random()*10);// 0~9중의 한 값을 임의로 얻는다.
-			int temp = number[0];   // number[0]과 number[n]의 값을 서로 바꾼다.
-			number[0] = number[n];
-			number[n] = temp;
-		}
+		int temp = 0; // 두 값을 바꾸는데 사용할 임시변수
+		int j = 0;	  // 임의의 값을 얻어서 저장할 변수
 		
-		for(int i=0; i < number.length; i++) {
-			System.out.print(number[i]);		// 배열의 내용을 출력한다.
+		// 배열에 저장된 값이 잘 섞이도록 충분히 큰 반복횟수를 지정한다.
+		// 배열의 첫 번째 요소와 임의의 요소에 저장된 값을 서로 바꿔서 값을 섞는다.
+		for(int i=0; i<100; i++) {
+			j = (int)(Math.random() * 45); // 배열 범위(0~44)의 임의의 값을 얻는다.
+			temp = ball[0];		// bale[0]과 ball[j]의 값을 서로 바꾼다.
+			ball[0]=ball[j];
+			ball[j]=temp;
 		}
+		// 배열 ball의 앞에서 부터 6개의 요소를 출력한다.
+		for(int i =0; i< 6; i++)
+			System.out.print(ball[i]+ " ");
 	}
 }
