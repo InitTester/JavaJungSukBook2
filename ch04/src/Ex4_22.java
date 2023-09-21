@@ -1,10 +1,17 @@
 public class Ex4_22 {
-	//FlowEx21
+	//FlowEx22
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int i = 10;
-		while(i >= 0) {
-			System.out.println(i--);
+		int i = 2;
+		while(i <= 9) {
+			int j =1;
+			System.out.println("["+ i +"]단");
+			while(j <=9) {
+				System.out.println(i + " * " + j + " = " + i*j);
+				j++;
+			}
+			System.out.println();
+			i++;
 		}
 	}
 }
