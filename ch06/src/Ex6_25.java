@@ -23,6 +23,4 @@ class Document {
 		this.name = name;
 		System.out.println("문서 " +this.name + "가 생성되었습니다.");
 	}
-	
-
 }
