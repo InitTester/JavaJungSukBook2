@@ -1,34 +1,33 @@
 public class Ex7_28 {
-	// InterfaceTest2
+	// InterfaceTest3
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub	
-		A2 a = new A2();
-		a.autoPlay(new B2());
-		a.autoPlay(new C());
+		A3 a = new A3();
+		a.methodA();
 	}
 }
 
-interface I {
-	public abstract void play();
+interface I2 {
+	public abstract void methodB();
 }
 
-class A2 {
-	void autoPlay(I i) {
-		i.play();
+class A3 {
+	void methodA() {
+		I2 i = InstanceManager.getInstance();
+		i.methodB();
 	}
 }
 
-class B2 implements I {
+class B3 implements I2 {
 	@Override
-	public void play() {
-		System.out.println("play in B class");
+	public void methodB() {
+		System.out.println("methodB in B class");
 	}
 }
 
-class C implements I {
-	@Override
-	public void play() {
-		// TODO Auto-generated method stub
-		System.out.println("play in C class");
+class InstanceManager {
+	
+	public static I2 getInstance() {
+		return new B3();
 	}
 }
