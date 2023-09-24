@@ -1,0 +1,24 @@
+import java.io.PrintStream;
+
+public class Ex8_13 {
+	// ExceptionEx13
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		PrintStream ps = null;
+		
+		try {
+			ps = new PrintStream("error.log"); // 에러 로그 생성
+			
+			System.out.println(1);
+			System.out.println(2);
+			System.out.println(3);
+			System.out.println(0/0);	// 예외발생
+			System.out.println(4);		// 실행되지 않는다.
+		} catch (Exception ae) {	
+			ae.printStackTrace(ps);	
+			ps.println("예외메시지 : "+ ae.getMessage()); // 화면대신 error.log파일에 출력
+		}
+		System.out.println(6);
+	}
+}

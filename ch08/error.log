@@ -1,0 +1,15 @@
+java.lang.ArithmeticException: / by zero
+	at Ex8_13.main(Ex8_13.java:16)
+예외메시지 : / by zero
+-----------------------------------------------
+예외발생시간 : Sun Sep 24 19:54:16 KST 2023
+java.lang.ArithmeticException: / by zero
+	at Ex8_14.main(Ex8_14.java:21)
+예외메시지 : / by zero
+-----------------------------------------------
+-----------------------------------------------
+예외발생시간 : Sun Sep 24 19:54:33 KST 2023
+java.lang.ArithmeticException: / by zero
+	at Ex8_14.main(Ex8_14.java:21)
+예외메시지 : / by zero
+-----------------------------------------------
