@@ -1,0 +1,60 @@
+import java.util.*;
+// MyVector2
+public class Ex11_16 extends Ex11_4 implements Iterator {
+	// MyVector2 = 11_16 , MyVector = 11_4
+//	public static void main(String[] args) {
+//	}
+	int cursor = 0;
+	int lastRet = -1;
+	
+	public Ex11_16(int capacity) {
+		super(capacity);
+	}
+	
+	public Ex11_16() {
+		this(10);
+	}
+	
+	public String toString() {
+		String tmp = "";
+		Iterator it = iterator();
+		
+		for(int i =0; it.hasNext(); i++) {
+			if(i!=0) tmp +=",";
+			tmp += it.next(); // tmp += next().toString();
+		}
+		
+		return "["+tmp+"]";
+	}
+	
+	
+	public Iterator iterator() {
+		cursor = 0;		// cursor와 lastRet를 초기화 한다.
+		lastRet = -1;
+		return this;
+	}
+	
+	public boolean hasNext() {
+		return cursor != size();
+	}
+	
+	public Object next() {
+		Object next = get(cursor);
+		lastRet = cursor++;
+		return next;
+	}
+	
+	public void remove() {
+		// 더이상 삭제할 것이 없으면 IllegalStateException를 발생시킨다.
+		if(lastRet==-1) {
+			throw new IllegalStateException();
+		} else {
+			remove(lastRet);
+			// 현재 위치(cursor)보다 이전의 것을 삭제했다면, cursor의 위치를 하나 감소시킨다.
+			if(lastRet < cursor)
+				cursor--;
+			
+			lastRet = -1; 	// lastRet의 값을 초기화 한다.
+		}
+	}
+}
