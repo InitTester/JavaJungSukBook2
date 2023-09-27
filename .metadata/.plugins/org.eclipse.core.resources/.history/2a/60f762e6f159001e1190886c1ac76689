@@ -1,0 +1,10 @@
+public class Ex7_16 {
+	// InstanceofTest
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+class Car {}
+class FireEngine extends Car {}

@@ -1,0 +1,14 @@
+public class Ex9_16 {
+	// StringEx7
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int value = 100;
+		String strValue = String.valueOf(value);
+		
+		int value2 = 100;
+		String strValue2 = String.valueOf(value2);
+		
+		System.out.println(strValue);
+		System.out.println(strValue2);
+	}
+}  

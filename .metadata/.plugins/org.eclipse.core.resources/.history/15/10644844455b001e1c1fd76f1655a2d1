@@ -1,0 +1,12 @@
+public class Ex9_18 {
+	// StringCount
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		private int count;
+		private String source = "";
+		
+		public Ex9_18 (String source) {
+			this.source = source;
+		}
+	}
+}  

@@ -1,0 +1,28 @@
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int result [] = new int[5];
+		int arr[] = {77,32,10,99,50};
+		
+			for(int i =0; i <5; i++) {
+				result[i]=1;
+				//System.out.println("result[i] = "+ i);
+				
+				for(int j = 0; j<5; j++) 
+					//System.out.println("i["+i+"] =" +arr[i] +", j["+j+"] =" + arr[j]);
+					if(arr[i]< arr[j]) {
+						System.out.println("j가 큰 경우 : i["+i+"] =" +arr[i] +", j["+j+"] =" + arr[j]);
+						result[i]++;
+					}
+			}
+			
+		for(int k =0; k<5; k++)
+		{
+			System.out.println(result[k]);
+		}
+
+	}
+
+}

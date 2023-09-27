@@ -1,0 +1,23 @@
+class Outer{
+	class InstanceInner4{
+		int iv = 100;
+	}
+	
+	static class StaticInner4 { 
+		int iv = 200;
+		static int cv = 300;
+	}
+
+	void myMethod() {
+		class LocalInner{
+			int iv = 400;
+		}
+	}
+}
+
+public class Ex10_4 {
+	// InnerEx4	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+}

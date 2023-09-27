@@ -1,0 +1,20 @@
+public class Ex7_27 {
+	// InterfaceTest2
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		A2 a = new A2();
+		a.methodA(new B2());		
+	}
+}
+
+class A2 {
+	public void methodA(B2 b) {
+		b.methodB();
+	}
+}
+
+class B2 {
+	public void methodB() {
+		System.out.println("methodB()");
+	}
+}

@@ -1,0 +1,12 @@
+public class Ex10_1 {
+	// InnerEx1
+	class InstanceInne {
+		int iv = 100;
+		static int cv = 100; 
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+
+	}
+}

@@ -1,0 +1,14 @@
+public class Ex6_4 {
+	// CardTest
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+
+class Card{
+	String kind;
+	int number;
+	static int width = 100;
+	static int height = 250;
+}

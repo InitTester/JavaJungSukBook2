@@ -1,0 +1,27 @@
+public class Ex10_2 {
+	// InnerEx2
+	class InstanceInner2 { }	
+	static class StaticInner2 { }
+	
+	//인스턴스멤버 간에는 서로 직접 접근이 가능하다.
+	InstanceInner2 iv = new InstanceInner2();
+	// static 멤버 간에는 서로 직접 접근이 가능하다.
+	static StaticInner2 cv = new StaticInner2();
+	
+	static void staticMethod() {
+		// static멤버는 인스턴스멤버에 직접 접근할 수 없다.
+		// InstanceInner2 obj1 = new InstanceInner2();
+		StaticInner2 obj2 = new InstanceInner2();
+		class LocalInner {
+			int iv = 300;
+			static int cv = 300;	// static변수를 선언할 수 없다.(16버전 이전)
+			final static int CONST = 300;	
+		}
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(InstanceInner2.CONST);
+		System.out.println(StaticInner2.cv);
+	}
+}

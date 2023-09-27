@@ -1,0 +1,9 @@
+import java.util.*;
+// MyVector2
+public class Ex11_16 extends Ex11_4 implements Iterator {
+	// MyVector2 = 11_16 , MyVector = 11_4
+//	public static void main(String[] args) {
+//	}
+	
+	
+}

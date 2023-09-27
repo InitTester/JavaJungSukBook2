@@ -1,0 +1,30 @@
+public class Ex7_18 {
+	// BindingTest2
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Parent_1 p = new Child_1();
+		Child_1 c = new Child_1();
+		
+		System.out.println("p.x = " + p.x);
+		p.method();
+		
+		System.out.println("c.x = " + c.x);
+		c.method();
+	}
+}
+
+class Parent_1 {
+	int x = 100;
+	
+	void method() {
+		System.out.println("Parent Method");
+	}
+}
+
+class Child_1 extends Parent_1 {
+	int x = 200;
+	
+	void method() {
+		System.out.println("Child Method");
+	}
+}

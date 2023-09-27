@@ -1,0 +1,40 @@
+package ch05;
+
+public class test {
+
+		static int max(int [] arr) {
+//			if(arr==null || arr.length == 0) {	
+//			return -9999;
+//		}
+//
+//		int mx = arr[0]; 
+//		for(int i = 1; i<arr.length;i++) {
+//		if(arr[0]<arr[i]) {
+//			mx = arr[i]; 	
+//			} 
+//		}
+//		return mx;	
+			int mx = arr[0];
+			if(arr==null || arr.length == 0) {
+				return -9999;
+			}
+
+				for(int i = 1; i<arr.length;i++) {
+				if(arr[0]<arr[i]) {
+				mx = arr[i]; 
+				} 
+			}
+
+			return mx;
+		}
+		
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int [] data = {3,2,9,4,7};
+		System.out.println(java.util.Arrays.toString(data));
+		System.out.println("최댓값:"+max(data));
+		System.out.println("최댓값:"+max(null));
+		System.out.println("최댓값:"+max(new int[0]));
+		}
+}

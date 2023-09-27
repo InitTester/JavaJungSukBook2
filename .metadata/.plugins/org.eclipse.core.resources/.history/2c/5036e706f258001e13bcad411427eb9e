@@ -1,0 +1,20 @@
+class Data2{ int x;}
+
+public class Ex6_10 {
+	// ParameterTest2
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Data2 d = new Data2();
+		d.x = 10;
+		System.out.println("main() : x = "+ d.x);
+		
+		change(d);
+		System.out.println("After change(d.x)");
+		System.out.println("main() : x = "+ d.x);
+	}
+	
+	static void change(Data d) { //기본형 매개변수
+		d.x = 1000;
+		System.out.println("change() : x = " + d.x );
+	}
+}

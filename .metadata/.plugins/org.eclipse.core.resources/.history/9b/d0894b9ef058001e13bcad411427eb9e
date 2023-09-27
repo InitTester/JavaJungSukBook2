@@ -1,0 +1,14 @@
+public class Ex6_7 {
+	// MyMathTest
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+	
+	static void firstMethod() {
+		secondMethod();
+	}
+	
+	static void secondMetehod() {
+		System.out.println("secondMethod()");
+	}
+}

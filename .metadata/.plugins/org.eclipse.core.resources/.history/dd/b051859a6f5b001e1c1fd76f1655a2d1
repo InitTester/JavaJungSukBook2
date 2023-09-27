@@ -1,0 +1,61 @@
+public class Ex10_3 {
+	// InnerEx3
+	private int outerIv = 0;
+	static int outerCv = 0;
+
+	class InstanceInner3 {
+		int iiv = outerIv;	// 외부 클래스의 private멤버도 접근가능하다.
+		int iiv2 = outerCv;
+	}
+
+	static class StaticInner3 { 
+		// static 클래스는 외부 클래스의 인스턴스멤버에 접근할 수 없다.
+//		int siv = outerIv;
+		static int scv = outerCv;
+	}
+
+	void myMethod() {
+		int lv = 0;
+		final int LV = 0;
+		
+		class LocalInner{
+			int liv = outerIv;
+			int liv2 = outerCv;
+			// 외부 클래스의 지역변수는 final이 붙은 변수(상수)만 접근가능하다.
+			int liv3 = lv; // 
+			int liv4 = Lv;
+		}
+	}
+	
+	
+		
+	
+	//인스턴스멤버 간에는 서로 직접 접근이 가능하다.
+	InstanceInner3 iv = new InstanceInner3();
+	// static 멤버 간에는 서로 직접 접근이 가능하다.
+	static StaticInner3 cv = new StaticInner3();
+	
+	static void staticMethod() {
+		// static멤버는 인스턴스멤버에 직접 접근할 수 없다.
+		// InstanceInner2 obj1 = new InstanceInner2();
+		StaticInner3 obj2 = new StaticInner3();
+		
+		// 굳이 접근하려면 아래와 같이 객체를 생성해야 한다.
+		// 인스턴스클래스는 외부 클래스를 먼저 생성해야만 생성할 수 있다.
+		Ex10_3 outer = new Ex10_3();
+		InstanceInner3 obj1 = outer.new InstanceInner3();
+	}
+	
+	void instanceMethod() {
+		//인스턴스메서드에서는 인스턴스멤버와 static멤버 모두 접근 가능하다.
+		InstanceInner3 obj1 = new InstanceInner3();
+		StaticInner3 obj2 = new StaticInner3();
+		//메서드 내에 지역적으로 선언된 내부 클래스는 외부에서 접근할 수 없다.
+		// LocalInner lv = new LocalInner();
+	}
+	
+	
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//	}
+}

@@ -1,0 +1,17 @@
+public class Ex7_15 {
+	// CastingTest2
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Car car = new Car();
+		Car car2 = null;
+		FireEngine fe = null;
+		
+		car.drive();
+		fe = car;	// class Car cannot be cast to class FireEngine (Car and FireEngine are in unnamed module of loader 'app')
+		fe.drive();
+		car2 = fe;
+		car2.drive();
+		
+	}
+}
+
