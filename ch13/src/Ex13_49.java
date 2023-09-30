@@ -1,47 +1,28 @@
-// AppletEx2
+// AppletEx3
 import java.awt.*;
 import java.awt.event.*;
 import java.applet.Applet;
 
-public class Ex13_49 extends Applet implements MouseMotionListener {
-	int x = 0;
-	int y = 0;
-	
+public class Ex13_49 extends Applet {
 	Image img = null;
-	Graphics gImg = null;
-	
-	public Ex13_49() {
-		addMouseMotionListener(this);
-	}
 	
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
 //		super.init();
-		img = createImage(500,500);
-		gImg = img.getGraphics();
-		gImg.drawString(getParameter("text"), 10, 50);
-		gImg.drawString("value1:" + getParameter("value1"),10,65);
-		gImg.drawString("value2:" + getParameter("value2"),10,80);
+		img = getImage(getDocumentBase(),getParameter("imgName"));
 	}
 	
 	@Override
-	public void mouseMoved(MouseEvent e) {
+	public void paint(Graphics g) {
 		// TODO Auto-generated method stub
-		x = e.getX();
-		y = e.getY();
-	}
-	
-	@Override
-	public void mouseDragged(MouseEvent e) {
-		// TODO Auto-generated method stub
-		if(e.getModifiersEx() != MouseEvent.BUTTON1_DOWN_MASK) return;
+//		super.paint(g);
+		// Image의 크기를 얻는다.
+		int imgWidth = img.getWidth(this); // getWidth(ImageObserver obj)
+		int imgHeight = img.getHeight(this); // getHeight(ImageObserver obj)
 		
-		gImg.drawLine(x, y, e.getX(), e.getY());
-		x = e.getX();
-		y = e.getY();
-		
-		repaint();
+		// 이미지를 Frame의 중앙에 출력한다.
+		g.drawImage(img, (getWidth()- imgWidth)/2,(getHeight()-imgHeight)/2,this);
 	}
 	
 	public static void main(String[] args) {
